@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Donation Website</title>
+    <link rel="stylesheet" href="style/elders.css">
+    <link rel="stylesheet" href="style/components.css">
+    <script src="./javascript/donate.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <img class="logo" src="Images/donation.png" height="50px" width="50px">
+
+        <!-- <img  class="user" src="Images/user.png" height="30"> -->
+        <ul>
+            <li><a href="login.html">Search</a></li>
+            <li><a href="aboutUs.html">About us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <h1>Share Hope</h1>
+
+    </header>
+
+    <video autoplay muted loop playsinline id="cd" width="100%">
+        <source src="video/help_elder_people.mp4" type="video/mp4">
+    </video>
+
+    <h1 class="title">Think about your Parents</h1>
+
+    <form class="cal">
+        <input name="num" type="number" min="1" step="1" value="1"> * <input name="amount" type="number" min="500"
+            step="500" value="500"><br><br>
+        <input type="button" value="Donate"
+            onclick="result.value = parseInt(num.value) * parseInt(amount.value); thankYouMessage();"><br><br>
+        Your Tribute is : <output name="result" for="num amount"></output>
+    </form>
+
+    <div class="text1">
+        <img class="elder" src="Images/elderpeople.jpg" height="400" width="400">
+        <h2 class="text2">Older people are critical contributors to family, community, and society. They are both the
+            largest growing
+            and the most under served population in the world.<br>
+            A monthly donation, starting at $40, helps support the cost of food, water, shelter, medicine and clothing.
+            .<br>
+            It restores dignity and hope while giving a Grandparent the respect they deserve.
+        </h2>
+    </div>
+
+    <footer>
+        <div class="f3">
+
+            Get to know us
+
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+            Connect With US<br>
+
+        </div>
+
+        <div class="f4">
+
+            <a href="aboutUs.html">About US</a>
+
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+            <a href="contactUS.html">Contact US</a>
+
+        </div>
+    </footer>
+</body>
+
+</html>

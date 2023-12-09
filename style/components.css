@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+}
+
+/* Header */
+header {
+    background: #4CAF50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+header .user {
+    float: right;
+}
+
+.logo {
+    margin: 10px 20px;
+    margin-bottom: 0%;
+    display: inline;
+    float: left;
+}
+
+header h1 {
+    font-size: 50px;
+    margin-top: 0px;
+    color: #ffffff;
+}
+
+ul {
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+    font-size: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+ul li a:hover {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    color: #000000;
+}
+
+.login {
+    display: inline;
+    color: cornsilk;
+    text-decoration: none;
+    float: right;
+    margin-top: 35px;
+    padding-left: 100px;
+    padding-right: 0px;
+}
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.f3 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.f4 {
+    text-align: center;
+}
+
+.f4 a {
+    margin: 30px;
+    text-decoration: none;
+    color: #ffffff;
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Donation Website
+    </title>
+    <link rel="stylesheet" href="style/authentication.css">
+    <script src="./javascript/registration.js"></script>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>
+                <h1>Register</h1>
+            </legend>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <label for="firstname">First Name:</label>
+            <input type="text" name="firstname" id="firstname" accesskey="F" required autofocus>
+            <br><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="lastname" accesskey="L" required autofocus>
+            <br><br>
+
+            <label for="email">Enter Email:</label>
+            <input type="email" id="email" name="email" accesskey="E">
+            <br><br>
+
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" maxlength="8">
+            <br><br>
+
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="123-456-7890"><br><br>
+
+            <button type="submit" class="registerbtn" id="register">Register</button>
+        </fieldset>
+
+        <div>
+            <p>Already have an account? <a href="./login.html">Login</a>.</p>
+        </div>
+    </form>
+</body>
+
+</html>
