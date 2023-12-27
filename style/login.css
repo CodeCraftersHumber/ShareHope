@@ -39,7 +39,7 @@ input[type="password"] {
 
 /* Style the submit button */
 button.registerbtn {
-    background-color: #4CAF50;
+    background-color: #232923;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -51,7 +51,6 @@ button.registerbtn:hover {
     background-color: #0056b3;
 }
 
-/* Style the "Create account?" link */
 a {
     text-decoration: none;
     color: #007BFF;

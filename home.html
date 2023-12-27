@@ -8,6 +8,33 @@
     <link rel="stylesheet" href="style/components.css">
     <link rel="stylesheet" href="style/home.css">
     <script src="./javascript/home.js"></script>
+    <script src="./javascript/search.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- jQuery UI library -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <script>
+        $(document).ready(function () {
+            $("#policies").on("click", function () {
+                $("#dialog").dialog({
+                    modal: true,
+                    width: 'auto',
+                    height: 'auto',
+                    resizable: false,
+                    draggable: false
+                });
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -15,15 +42,17 @@
 
         <img class="logo" src="Images/donation.png" height="50px" width="50px">
 
-        <!-- <img  class="user" src="Images/user.png" height="30"> -->
         <ul>
-            <li><a href="login.html">Search</a></li>
+            <li>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <i class="fas fa-search search-icon" onclick="searchPages()"></i>
+                </div>
+            </li>
             <li><a href="aboutUs.html">About us</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
         <h1>Share Hope</h1>
-
-        <!--Add all the content of disaster donation over here-->
 
     </header>
 
@@ -31,40 +60,104 @@
 
         <img src="Images/test1.jpg"><br>
 
-        <button class="btn" id="donateNowBtn"><a>Donate Now</a></button>
+        <button class="btnd" id="donateNowBtn"><a href="disaster.html">Donate Now</a></button>
 
     </div>
 
     <main>
-        <!--Add all the content of child donation over here-->
-        <div class="chi">
-            <img class="child" src="Images/child donation.jpg" height="300" width="500">
-            <span class="ch">
-                <h1>Raise Funds</h1>
-                <P><b>To give our future</b> <br>a proper education</P>
-                <button class="btn2" id="childDonateBtn"><a>Donate</a></button>
-            </span>
+        <div class="slider-container">
+            <div class="slider ">
+
+                <div class="container mt-3 slider-card">
+                    <div class="card">
+                        <h2 class="card-title mb-5">Child<br>Donation</h2>
+                        <img src="Images/child donation.jpg" class="card-img-top" alt="Blood Donation Event Image">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <button type="button" class="btn2" id="childDonateBtn"><a
+                                        href="./child.html">Donate</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-3 slider-card">
+                    <div class="card">
+                        <h2 class="card-title mb-5">Elder<br>Donation</h2>
+                        <img src="Images/elder.jpg" class="card-img-top" alt="Blood Donation Event Image">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <button type="button" class="btn2" data-target="#target1" id="eldersDonateBtn"><a
+                                        href="./elders.html">Donate</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-3 slider-card">
+                    <div class="card">
+                        <h2 class="card-title mb-5">Disability Donation</h2>
+                        <img src="Images/disabalitydonation.jpeg" class="card-img-top" alt="Disability Donation Image">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <button type="button" class="btn2" data-target="#target1" id="disabilityDonateBtn"><a
+                                        href="./disability.html">Donate</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-3 slider-card">
+                    <div class="card">
+                        <h2 class="card-title mb-5">Disaster Donation</h2>
+                        <img src="Images/disaster1.jpg" class="card-img-top" alt="Disater Image">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <button type="button" class="btn2" data-target="#target1" id="disasterDonateBtn"><a
+                                        href="./disaster.html">Donate</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <!--Add all the content of elderly donation over here-->
-        <div class="eld">
-            <img class="elderly" src="Images/elderlydonation.jpg" height="300" width="500">
-            <span class="el">
-                <h1>Raise Funds</h1>
-                <P><b>To give our parents</b> <br>a better life</P>
-                <button class="btn2" id="elderDonateBtn"><a>Donate</a></button>
-            </span>
+        <!-- Navigation arrows -->
+        <div class="arrow" id="prev">&lt;</div>
+        <div class="arrow" id="next">&gt;</div>
+        <div>
+            <fieldset>
+                <h1>Welcome to Our Donation Platform</h1>
+                <div>
+                    <h4>Make a Difference Today</h4>
+                    <p style="font-size: 18px;">At Share Hope, our fundamental belief rests in the profound influence of
+                        collective action.<br>
+                        We firmly advocate that every contribution, irrespective of its size, carries within<br> it the
+                        transformative potential to bring about positive and meaningful change. Our philosophy
+                        revolves around the understanding that small actions, when combined with the <br>efforts of
+                        many, possess the ability to create a ripple effect, leading to significant and impactful
+                        outcomes</p>
+                </div>
+                <input type="button" id="policies" class="btn btn-dark" value="View Terms and Conditions">
+                <div id="dialog" title="Terms and Conditions" style="display: none;">
+                    <p>a. Child Donation: Contributions made toward child welfare programs, education, health, and
+                        development initiatives for children under the age of 18.<br>
+
+                        b. Elder Donation: Contributions aimed at supporting the elderly, their care, healthcare, and
+                        well-being.<br>
+
+                        c. Disaster Donation: Funds directed towards disaster relief, rehabilitation, and rebuilding
+                        efforts in areas affected by natural calamities, crises, or emergencies.<br>
+
+                        d. Disability Donation: Contributions assisting individuals with disabilities, aiding in
+                        accessibility, support services, and empowerment programs.<br>
+                    </p>
+                </div><br>
+            </fieldset>
         </div>
 
-        <!--Add all the content of disabilty donation over here-->
-        <div class="dis">
-            <img class="disabality" src="Images/disabalitydonation.jpeg" height="300" width="500">
-            <span>
-                <h1>Raise Funds</h1>
-                <P><b>Instead of ignoring</b> <br>Let's help them</P>
-                <button class="btn2" id="disabilityDonateBtn"><a>Donate</a></button>
-            </span>
-        </div>
+
     </main>
 
     <div class="body">
@@ -90,27 +183,36 @@
         </div>
     </div>
 
-    <footer>
-        <div class="f3">
 
-            Get to know us
-
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-
-            Connect With US<br>
-
-        </div>
-
-        <div class="f4">
-
-            <a id="about">About US</a>
-
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-
-            <a id="contact">Contact US</a>
-
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="f3">
+                        <h3>Get to know us</h3>
+                        <p>Discover our mission and values. Learn about our team and the work we do.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="f4">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="additional-links">
+                            <a id="about" href="aboutUs.html">About Us</a>
+                            <a id="contact" href="contactUS.html">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+
+
+
 </body>
 
 </html>

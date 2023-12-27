@@ -1,9 +1,14 @@
-form {
+.cal {
     position: absolute;
-    top: 100%;
+    top: 95%;
     left: 5%;
     color: cornsilk;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
+    border-radius: 10px;
+    border: 2px solid #fff; /* White border */
 }
+
 
 /* Title */
 .title {

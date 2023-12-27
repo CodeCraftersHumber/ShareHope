@@ -10,20 +10,20 @@
     height: 105%;
 }
 
-.btn {
+.btnd {
     position: absolute;
     top: 75%;
     left: 40%;
     transform: translate(10%, 60%);
     font-size: 20px;
     padding: 10px 30px;
-    background-color: #4CAF50;
+    background-color: #232923;
     border: none;
     border-radius: 3px;
     cursor: pointer;
 }
 
-.btn a {
+.btnd a {
     text-decoration: none;
     color: #fff;
 }
@@ -65,9 +65,9 @@
 /* main */
 main {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    height: 70vh;
 }
 
 main div {
@@ -76,19 +76,14 @@ main div {
 }
 
 main img {
-    width: 400px;
-    transition: height 0.3s;
+    width: 200px;
     padding-right: 10px;
-}
-
-main img:hover {
-    height: 450px;
 }
 
 main .btn2 {
     font-size: 20px;
     padding: 10px 30px;
-    background-color: #4CAF50;
+    background-color: #232923;
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -104,4 +99,73 @@ main .child,
 main .elderly,
 main .disability {
     max-width: 100%;
+}
+
+ /* Style for the slider container */
+ .slider-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Style for the slider */
+.slider {
+    width:500px;
+    display: flex;
+    transition: transform 0.5s;
+}
+
+
+/* Style for the navigation arrows */
+.arrow {
+    cursor: pointer;
+    font-size: 60px;
+    color: #232923;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+}
+#prev {
+    left: -1%;
+}
+#next {
+    right: 67%;
+}
+.card {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    /* transform: scale(1.1); */
+    background-color: rgb(189, 243, 189);
+}
+
+.card .image {
+    padding: 10px;
+}
+
+.hedingSponser{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.card img {
+    max-width:100% ;
+    transition: filter 0.3s;
+}
+
+.card:hover img {
+    filter: blur(5px);
+}
+.event-details {
+    font-weight: bold;
 }

@@ -27,7 +27,7 @@ if (!firstname || !lastname || !email || !password || !phone) {
     } else {
     localStorage.setItem(email, password);
     alert('Registration successful.');
-    window.location.href = "./home.html";
+    window.location.href = "./login.html";
 }
     console.log(window.location.href);
     console.log(email);

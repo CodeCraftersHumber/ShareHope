@@ -1,30 +1,28 @@
-var $ = function (id) {
-    return document.getElementById(id);
-};
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector('.slider');
+    const sliderCards = document.querySelectorAll('.slider-card');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    let currentIndex = 0;
 
-const redirectToPage = function (nav) {
-    console.log(nav);
-    window.location.href = nav;
-};
+    function showSlide(index) {
+        slider.style.transform = `translateX(-${index * (300 + 10)}px)`;
+    }
 
-//navigation to different pages
-window.onload = function () {
-    $("donateNowBtn").onclick = function () {
-        redirectToPage("./disaster.html");
-    };
-    $("childDonateBtn").onclick = function () {
-        redirectToPage("./child.html");
-    };
-    $("elderDonateBtn").onclick = function () {
-        redirectToPage("./elders.html");
-    };
-    $("disabilityDonateBtn").onclick = function () {
-        redirectToPage("./disability.html");
-    };
-    $("about").onclick = function () {
-        redirectToPage("./aboutUs.html");
-    };
-    $("contact").onclick = function () {
-        redirectToPage("./contactUs.html");
-    };
-};
+    function nextSlide() {
+        if (currentIndex < sliderCards.length - 1) {
+            currentIndex++;
+            showSlide(currentIndex);
+        }
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            showSlide(currentIndex);
+        }
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+  });
